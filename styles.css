@@ -1,0 +1,98 @@
+body {
+  background-color: #181818;
+  height: 100%;
+  color: #fbfbfb;
+  font-family: 'Inter',
+  sans-serif;
+}
+
+
+h1 {
+  font-size: 50px;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+#home-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 20vh 0;
+}
+
+#home-div h2 {
+  font-size: 30px;
+  margin: 5vh;
+  width: 100%;
+  text-align: center;
+}
+
+#present-btn{
+  margin-top: 20px;
+  padding: 2vh 5vw;
+  border-radius: 5px;
+  background-color: #0dff5a;
+  color: #181818;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#present-btn:hover {
+  background-color: rgba(0, 255, 76, 0.547);
+}
+
+#present-btn:active {
+  background-color: rgba(0, 255, 76, 0.747);
+}
+
+#absent-btn {
+  margin-top: 20px;
+  padding: 2vh 25vw;
+  border-radius: 5px;
+  background-color: #e93131;
+  color: #181818;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#absent-btn:hover {
+  background-color: rgba(233, 49, 49, 0.547);
+}
+
+#absent-btn:active {
+  background-color: rgba(233, 49, 49, 0.747);
+}
+
+#footer-div {
+  margin: auto;
+  bottom: 0;
+  width: 80%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #181818;
+  color: #fbfbfb;
+  font-size: 20px;
+}
+
+#copylist-btn {
+  margin-top: 20px;
+  padding: 2vh 5vw;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #181818;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+#copylist-btn:hover {
+  background-color: rgba(255, 255, 255, 0.547);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://api.fontshare.com/v2/css?f[]=supreme@400&f[]=chubbo@700&display=swap" rel="stylesheet">
+  <title>Attendance Taker</title>
+</head>
+
+<body>
+  <h1>Attendance Taker</h1>
+  <div id="home-div">
+      <h2 id="studentName"></h2>
+    <div>
+      <button id="present-btn" onclick="markPresent()">Present</button>
+      <button id="absent-btn" onclick="markAbsent()">Absent</button>
+    </div>
+  </div>
+
+  <div id="footer-div">
+    <div>
+      <h3>List of Present Students</h3>
+      <p>Note: You can copy all the attendance from the bottom of the page!</p>
+    </div>
+    <div id="presentList"></div>
+    <button id="copylist-btn" onclick="copyPresentList()">Copy List</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
