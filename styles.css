@@ -6,11 +6,7 @@ body {
   sans-serif;
 }
 
-
 h1 {
-  font-size: 50px;
-  margin: auto;
-  width: 50%;
   text-align: center;
 }
 
@@ -20,12 +16,12 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin: 20vh 0;
+  margin: 10vh 0;
 }
 
 #home-div h2 {
   font-size: 30px;
-  margin: 5vh;
+  margin: 1.5vh;
   width: 100%;
   text-align: center;
 }
@@ -51,7 +47,7 @@ h1 {
 }
 
 #absent-btn {
-  margin-top: 20px;
+  margin-top: 1vh;
   padding: 2vh 25vw;
   border-radius: 5px;
   background-color: #e93131;
@@ -73,13 +69,24 @@ h1 {
 #footer-div {
   margin: auto;
   bottom: 0;
-  width: 80%;
+  width: 90%;
   text-align: center;
   padding: 10px 0;
   background-color: #181818;
   color: #fbfbfb;
   font-size: 20px;
 }
+
+#footer-div p{
+  margin: auto;
+  width: 90%;
+}
+#footer-div h3 {
+  width: 90%;
+  margin: 0;
+  padding: 0;
+}
+
 
 #copylist-btn {
   margin-top: 20px;
