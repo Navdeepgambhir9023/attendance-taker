@@ -43,7 +43,6 @@ const students = [
   "USMENDRA SINGH"
 ];
 
-
 // Array to store present students
 const presentStudents = [];
 
@@ -80,6 +79,7 @@ function nextStudent() {
       listItem.textContent = student;
       presentList.appendChild(listItem);
     });
+    document.getElementById("totalPresent").textContent = `Total Present: ${presentStudents.length}`;
   }
 }
 
@@ -92,7 +92,7 @@ function copyPresentList() {
 
   navigator.clipboard.writeText(namesText)
     .then(() => {
-      alert("List copied to clipboard now you can paste it anywhere!");
+      alert("List copied to clipboard now you can paste it anywhere you want!");
     })
     .catch(err => {
       console.error('Failed to copy: ', err);
