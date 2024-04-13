@@ -110,6 +110,31 @@ function undo() {
 }
 
 
+// Function to handle 'Present' button click
+function markPresent() {
+  const currentStudent = students[currentStudentIndex];
+  presentStudents.push(currentStudent);
+  updatePresentCount(); // Update the count of present students
+  const studentNameElement = document.getElementById("studentName");
+  studentNameElement.textContent = currentStudent;
+  studentNameElement.classList.add("float-animation", "present"); // Apply the animation class and color class
+  setTimeout(() => {
+    studentNameElement.classList.remove("float-animation", "present"); // Remove the animation and color class after 0.3 seconds
+    nextStudent();
+  }, 300);
+}
+
+// Function to handle 'Absent' button click
+function markAbsent() {
+  updatePresentCount(); // Update the count of present students
+  const studentNameElement = document.getElementById("studentName");
+  studentNameElement.classList.add("float-animation", "absent"); // Apply the animation class and color class
+  setTimeout(() => {
+    studentNameElement.classList.remove("float-animation", "absent"); // Remove the animation and color class after 0.3 seconds
+    nextStudent();
+  }, 300);
+}
+
 // Function to copy present students list to clipboard
 function copyPresentList() {
   const presentList = document.getElementById("presentList");
@@ -125,6 +150,13 @@ function copyPresentList() {
       console.error('Failed to copy: ', err);
     });
 }
+
+
+// Function to update the count of present students
+function updatePresentCount() {
+  document.getElementById("totalPresent").textContent = `Total Present: ${presentStudents.length}`;
+}
+
 
 // Initialize by displaying the first student
 displayCurrentStudent();

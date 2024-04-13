@@ -1,9 +1,9 @@
 body {
-  background-color: #181818;
+  background-color: #f8f8f8;
   height: 100%;
-  color: #fbfbfb;
+  color: #111111;
   font-family: 'Inter',
-  sans-serif;
+    sans-serif;
 }
 
 h1 {
@@ -16,7 +16,11 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin: 10vh 0;
+  margin: 10vh 5vw;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
 #home-div h2 {
@@ -26,7 +30,7 @@ h1 {
   text-align: center;
 }
 
-#present-btn{
+#present-btn {
   margin-top: 20px;
   padding: 2vh 5vw;
   border-radius: 5px;
@@ -36,6 +40,7 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
+    border: none;
 }
 
 #present-btn:hover {
@@ -43,7 +48,7 @@ h1 {
 }
 
 #present-btn:active {
-  background-color: rgba(0, 255, 76, 0.747);
+  background-color: rgba(0, 163, 49, 0.863);
 }
 
 #absent-btn {
@@ -56,14 +61,15 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
-}
+  border: none;
+  }
 
 #absent-btn:hover {
   background-color: rgba(233, 49, 49, 0.547);
 }
 
 #absent-btn:active {
-  background-color: rgba(233, 49, 49, 0.747);
+  background-color: rgba(176, 36, 36, 0.911);
 }
 
 #undo-btn {
@@ -76,6 +82,7 @@ h1 {
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
+    border: none;
 }
 
 #undo-btn:hover {
@@ -83,44 +90,75 @@ h1 {
 }
 
 #undo-btn:active {
-  background-color: rgba(255, 204, 0, 0.747);
+  background-color: rgba(146, 117, 5, 0.747);
 }
-
 
 #footer-div {
-  margin: auto;
-  bottom: 0;
-  width: 90%;
-  text-align: center;
-  padding: 10px 0;
-  background-color: #181818;
-  color: #fbfbfb;
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 10vh 5vw;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-#footer-div p{
+#footer-div p {
   margin: auto;
-  width: 90%;
 }
-#footer-div h3 {
-  width: 90%;
-  margin: auto;
+
+#footer-div h2 {
+  margin: 1vh auto;
   padding: 0;
 }
-
 
 #copylist-btn {
   margin-top: 20px;
   padding: 2vh 5vw;
   border-radius: 5px;
-  background-color: #ffffff;
-  color: #181818;
+  background-color: #3281ff;
+  color: #fafafaed;
   font-size: 20px;
   cursor: pointer;
   transition: 0.3s;
   width: 100%;
+  border: none;
 }
 
 #copylist-btn:hover {
-  background-color: rgba(255, 255, 255, 0.547);
+  background-color: rgba(50, 129, 255, 0.741);
+}
+
+#copylist-btn:active {
+  background-color: rgba(0, 63, 123, 0.863);
+}
+
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-animation {
+  animation: floatUpDown 0.3s ease-in-out;
+}
+
+.present {
+  color: #0dff5a;
+}
+
+.absent {
+  color: #e93131;
 }
