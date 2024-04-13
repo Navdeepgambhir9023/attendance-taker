@@ -33,15 +33,17 @@ const students = [
   "VIBHUTI SHARMA",
   "VISHAL KUMAR SINGH",
   "VISHAL SINGH CHAUHAN",
-  "YASH BANAIT",
   "YASH KUSUMAKAR",
-  "MANASVI NEEMA",
-  "UDAY YADAV",
-  "ALI ASGAR TAMBAWALA",
-  "MANASVI BAGHERWAL",
-  "TUSHAR SHARMA",
-  "USMENDRA SINGH"
 ];
+
+const nbBtStudents = [
+    "MANASVI NEEMA",
+    "UDAY YADAV",
+    "ALI ASGAR TAMBAWALA",
+    "MANASVI BAGHERWAL",
+    "TUSHAR SHARMA",
+    "USMENDRA SINGH"
+]
 
 // Array to store present students
 const presentStudents = [];
@@ -49,8 +51,10 @@ const presentStudents = [];
 let currentStudentIndex = 0;
 
 // Function to display current student and buttons
+// Function to display current student and buttons
 function displayCurrentStudent() {
   const currentStudent = students[currentStudentIndex];
+  document.getElementById("studentName").textContent = ""; // Clear existing content
   document.getElementById("studentName").textContent = currentStudent;
 }
 
@@ -67,13 +71,15 @@ function markAbsent() {
 }
 
 // Function to move to the next student or finish attendance
+// Function to move to the next student or finish attendance
 function nextStudent() {
   currentStudentIndex++;
   if (currentStudentIndex < students.length) {
     displayCurrentStudent();
   } else {
-    // All students have been processed, print present students
+    // All students have been processed, print present students only once
     const presentList = document.getElementById("presentList");
+    presentList.innerHTML = ""; // Clear the present list before updating
     presentStudents.forEach(student => {
       const listItem = document.createElement("p");
       listItem.textContent = student;
@@ -82,6 +88,27 @@ function nextStudent() {
     document.getElementById("totalPresent").textContent = `Total Present: ${presentStudents.length}`;
   }
 }
+
+
+// Function to handle 'Undo' button click
+function undo() {
+  if (presentStudents.length > 0 && currentStudentIndex > 0) {
+    currentStudentIndex--; // Decrement the currentStudentIndex to display the previous student
+    const lastStudent = presentStudents.pop(); // Remove the last student from the presentStudents array
+    // Find and remove the last student from the present list displayed on the page
+    const presentList = document.getElementById("presentList");
+    const listItems = presentList.querySelectorAll("p");
+    for (let i = 0; i < listItems.length; i++) {
+      if (listItems[i].textContent === lastStudent) {
+        presentList.removeChild(listItems[i]);
+        break;
+      }
+    }
+    document.getElementById("totalPresent").textContent = `Total Present: ${presentStudents.length}`;
+    displayCurrentStudent(); // Update the displayed student name
+  }
+}
+
 
 // Function to copy present students list to clipboard
 function copyPresentList() {
@@ -101,3 +128,5 @@ function copyPresentList() {
 
 // Initialize by displaying the first student
 displayCurrentStudent();
+
+
